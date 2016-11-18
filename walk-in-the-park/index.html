@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Walk in the Park</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CDN -->
+    <script src="https://use.fontawesome.com/0d43b53793.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" media="screen">
+    <link rel="stylesheet" href="css/eq-height.css" media="screen">
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+    <header class="col-xs-12">
+      <h1>Walk in the Park <i class="fa fa-paw" aria-hidden="true"></i></h1>
+    </header>
+  </div>
+</div>
+
+    <div id="main-wrapper" class="container">
+      <div class="row">
+          <div class="col-xs-12 col-sm-5 col-md-4 park-list">
+              <!-- <input type="text" id="state" name="searchPark" value="" class="state-input" placeholder="Enter a State" autofocus> -->
+              <select id="state" class="state-input">
+                <option>Select State</option>
+                <option value="36.7783,119.4179,100mi">California</option>
+                <option value="27.6648,81.5158,100mi">Florida</option>
+                <option value="41.4925,99.9018,200mi">Nebraska</option>
+                <option value="40.7128,74.0059,100mi">New York</option>
+                <option value="43.8041,120.5542,200mi">Oregon</option>
+              </select>
+
+              <span class="dp">Dog Park</span>
+              <!-- <a href="#" id="search-go" class="">SEARCH</a> -->
+              <!--
+            <ul>
+              <li><a href="">Burbank</a></li>
+              <li><a href="">North Hollywood</a></li>
+              <li><a href="">Hollywood</a></li>
+
+            </ul>-->
+            <div class="fav-saves">
+                <p>No Favorites saved</p>
+                <div class="saved-img"></div>
+                <div class="saved-img"></div>
+                <div class="saved-img"></div>
+                <div class="saved-img"></div>
+
+            </div>
+                          <div id="state-selected"></div>
+
+          </div>
+          <div class="col-xs-12 col-sm-7 col-md-8 text-center park-images">
+              <div class="images"></div>
+
+          </div>
+      </div>
+
+    </div>
+
+  <div class="container-fluid sign-in-view">
+    <div class="row text-center">
+    <!--  <button class="btn btn-default">-->
+      <!--</button> -->
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="start-modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h2 class="modal-title text-center">Walk in the Park</h2>
+        </div>
+        <div class="modal-body text-center">
+          <a href="#" class="btn btn-primary" id="search-b">login to continue</a>
+          <br />
+          <br />
+        </div>
+
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+  <div class="modal fade" id="saved-image">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h2 class="modal-title text-center">Saved Image</h2>
+        </div>
+        <div class="modal-body text-center">
+              <img src="img/placeholder.jpg" />
+          <br />
+          <br />
+        </div>
+
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyB5RmpE91DQlT8HNq699UW0FKwttPhfe44",
+      authDomain: "walk-in-the-park-a6caa.firebaseapp.com",
+      databaseURL: "https://walk-in-the-park-a6caa.firebaseio.com",
+      storageBucket: "walk-in-the-park-a6caa.appspot.com",
+      messagingSenderId: "355023149027"
+    };
+    firebase.initializeApp(config);
+  </script>
+    <script src="js/500px.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
